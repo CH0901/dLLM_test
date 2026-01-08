@@ -149,7 +149,7 @@ if 'llada' in class_name:
         steps=args.steps, gen_length=args.gen_length, block_length=args.block_length, temperature=0., cfg_scale=0., remasking='low_confidence', mc_num=args.mc_num, batch_size=args.batch_size
     )
     model = model_cls(model=model, model_path=pretrained_model_dir, **model_args)
-elif 'dream' in class_name and 'base' in pretrained_model_dir.lower():
+elif 'dream' in class_name and 'dream' in pretrained_model_dir.lower():
     model_cls = get_model('dream_base')
     model_args = dict(
         diffusion_steps=args.diffusion_steps, max_new_tokens=args.max_new_tokens, mc_num=args.mc_num, batch_size=args.batch_size

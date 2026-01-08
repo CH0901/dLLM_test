@@ -3,7 +3,7 @@ export HF_DATASETS_TRUST_REMOTE_CODE=true
 export HF_ALLOW_CODE_EVAL=1
 
 DIRPATH="$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")/.." >/dev/null 2>&1 && pwd)"
-MODEL_PATH="/home/yichen/dlm/model/dream-7b-base"
+MODEL_PATH="/path/to/your/model"  # You could replace it with dream or dream-instruct model path
 
 # model_path: the path to the pretrained model
 # block_size: the block size for DuQuant rotation

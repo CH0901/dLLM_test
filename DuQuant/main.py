@@ -73,7 +73,7 @@ def test_output(lm, args):
         class_name = lm.model.__class__.__name__.lower()
         if 'llada' in class_name:
             out = lm.generate(input_ids, steps=128, gen_length=128, block_length=32, temperature=0., cfg_scale=0., remasking='low_confidence')
-        elif 'dream' in class_name and 'base' in args.model_path.lower():
+        elif 'dream' in class_name:
             # model_args = dict(
             #     diffusion_steps=args.diffusion_steps, max_new_tokens=args.max_new_tokens, mc_num=args.mc_num
             # )
@@ -199,7 +199,7 @@ def evaluate(lm, args, logger):
             model_args = dict(
                 steps=args.steps, gen_length=args.gen_length, block_length=args.block_length, temperature=0., cfg_scale=0., remasking='low_confidence', mc_num=args.mc_num
             )
-        elif 'dream' in class_name and 'base' in args.model_path.lower():
+        elif 'dream' in class_name:
             model_args = dict(
                 diffusion_steps=args.diffusion_steps, max_new_tokens=args.max_new_tokens, mc_num=args.mc_num
             )

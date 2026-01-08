@@ -16,6 +16,7 @@ Your star means a lot to us in developing this project! ⭐⭐⭐
 
 
 ## 📰 News
+* [2026/01/08] 🔥 We add support for Dream-Instruct with AWQ/GPTQ/SmoothQuant/DuQuant!
 * [2025/10/15] 🔥 We release the code for quantizing dLLMs!
 * [2025/08/20] 🚀 Our paper is available on arXiv!
 
