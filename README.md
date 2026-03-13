@@ -16,6 +16,7 @@ Your star means a lot to us in developing this project! ⭐⭐⭐
 
 
 ## 📰 News
+* [2026/03/13] 🔥 Add support for Dream with AWQ/GPTQ on Code and Math tasks! Many thanks to [Bingchen Yao](https://github.com/Dreamer-Toby)!
 * [2026/01/08] 🔥 We add support for Dream-Instruct with AWQ/GPTQ/SmoothQuant/DuQuant!
 * [2025/10/15] 🔥 We release the code for quantizing dLLMs!
 * [2025/08/20] 🚀 Our paper is available on arXiv!
@@ -49,6 +50,9 @@ To run evaluation for QuaRot, please download and install the [fast-hadamard-tra
 
 
 ## ⚙️ Usage
+
+Please check [Dream](Dream.md) for code and math evaluation results of Dream-7B-Instruct.
+
 Please refer to the `scripts` folder for running different weight-only quantization methods (AWQ, GPTQ) and weight–activation quantization methods (SmoothQuant, QuaRot, DuQuant).
 
 Please download the LLaDA-base/LLaDA-Instruct or Dream models and replace the `MODEL_PATH` with your specific paths.
