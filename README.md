@@ -1,100 +1,40 @@
-# Quantization Meets dLLMs: A Systematic Study of Post-training Quantization for Diffusion LLMs
+# dLLM Quantization x Fast-dLLM 실험
 
-<h5 align="center"> 
+## 개요
+- QDLM (DuQuant W4A4) + Fast-dLLM (KV cache) 통합 실험
+- 모델: LLaDA-8B-Instruct
 
-[![arXiv](https://img.shields.io/badge/QDLM-2508.14896-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2508.14896)
-[![GitHub](https://img.shields.io/badge/GitHub-Code-green?logo=github)](https://github.com/FelixMessi/QDLM)
-[![License](https://img.shields.io/badge/⚖️%20Code%20License-MIT-blue)](https://github.com/FelixMessi/QDLM/blob/main/LICENSE)
- <br>
+## 실험 구조
+- QDLM으로 duquant_parameters.pth 생성
+- Fast-dLLM에서 base model + fake-quant params 로드
+- KV cache / parallel decoding으로 추론
 
-</h5>
+## GSM8K 결과 (100 samples, 5-shot)
+| Model            | flexible | strict |
+|------------------|----------|--------|
+| FP16 no cache    | 0.72     | 0.40   |
+| FP16 cache ON    | 0.74     | 0.40   |
+| W4A4 no cache    | 0.73     | 0.43   |
+| W4A4 cache ON    | 0.74     | 0.38   |
 
+## Pilot 분석 결과
+- 가설 3 확인: masked vs unmasked token activation 통계 유의미한 차이
+- 가설 4 부분 확인: Layer 16에서 high mask -> masked token MSE +66.5%
+- Layer 24 역전 발견: low mask -> unmasked token MSE -90.2%
+- 결론: masked/unmasked 섞어서 calibration하면 레이어별로 오차 방향이 다름
 
-Welcome to the official code repository for "[**Quantization Meets dLLMs: A Systematic Study of Post-training Quantization for Diffusion LLMs**](https://arxiv.org/abs/2508.14896)".
+## 파일 구조
+```
+code/
+  apply_duquant.py   # DuQuant params -> Fast-dLLM 어댑터
+  chat.py            # Fast-dLLM chat 패치본
+  eval_llada.py      # Fast-dLLM eval 패치본
 
-Your star means a lot to us in developing this project! ⭐⭐⭐
-
-
-## 📰 News
-* [2026/03/13] 🔥 Add support for Dream with AWQ/GPTQ on Code and Math tasks! Many thanks to [Bingchen Yao](https://github.com/Dreamer-Toby)!
-* [2026/01/08] 🔥 We add support for Dream-Instruct with AWQ/GPTQ/SmoothQuant/DuQuant!
-* [2025/10/15] 🔥 We release the code for quantizing dLLMs!
-* [2025/08/20] 🚀 Our paper is available on arXiv!
-
-
-
-## 👀 Introduction
-
-
-- We present the **first systematic study** on quantizing diffusion-based language models (dLLMs).
-
-- This repository implements **state-of-the-art post-training quantization (PTQ)** methods for dLLM, including **GPTQ**, **AWQ**, **SmoothQuant**, **QuaRot**, and **DuQuant**.
-
-- We comprehensively investigate the **impact of quantization** on dLLMs across **four key dimensions**: bit-width, quantization method, task category, and model architecture.
-
-
-
-## 🔧 Installation
-```bash
-conda create -n qdlm python=3.10 -y
-conda activate qdlm
-git clone https://github.com/FelixMessi/QDLM
-pip install --upgrade qdlm 
-pip install -r requirements.txt
-pip install math-verify==0.8.0 antlr4-python3-runtime==4.11.0 sympy==1.14.0
-cd ./lm-evaluation-harness && pip install -e .
+results/
+  pilot/             # activation 분석 그래프
+  100samples/        # GSM8K 100샘플 eval JSON
 ```
 
-To run evaluation for QuaRot, please download and install the [fast-hadamard-transform](https://github.com/Dao-AILab/fast-hadamard-transform/releases) with your cuda version.
-
-
-
-## ⚙️ Usage
-
-Please check [Dream](Dream.md) for code and math evaluation results of Dream-7B-Instruct.
-
-Please refer to the `scripts` folder for running different weight-only quantization methods (AWQ, GPTQ) and weight–activation quantization methods (SmoothQuant, QuaRot, DuQuant).
-
-Please download the LLaDA-base/LLaDA-Instruct or Dream models and replace the `MODEL_PATH` with your specific paths.
-
-Detailed usage instructions are provided in the corresponding shell scripts.
-
-
-
-## 📂 Contact
-If you have further questions, please open an issue or contact haokun.lin@cripac.ia.ac.cn or xuhb2001@gmail.com.
-
-Discussions and potential collaborations are also welcome.
-
-
-
-## 🙏 Acknowledgement
-This repo is built upon the following projects: [AutoGPTQ](https://github.com/AutoGPTQ/AutoGPTQ), [AWQ](https://github.com/mit-han-lab/llm-awq), [QuaRot](https://github.com/spcl/QuaRot), [DuQuant](https://github.com/Hsu1023/DuQuant), and [lm-eval](https://github.com/EleutherAI/lm-evaluation-harness).
-
-
-We thank the authors for their codes.
-
-
-
-## 📝 Citation
-Please cite our work if you use our code or discuss our findings in your own research:
-```bibtex
-@article{lin2025quantization,
-  title={Quantization meets dllms: A systematic study of post-training quantization for diffusion llms},
-  author={Lin, Haokun and Xu, Haobo and Wu, Yichen and Guo, Ziyu and Zhang, Renrui and Lu, Zhichao and Wei, Ying and Zhang, Qingfu and Sun, Zhenan},
-  journal={arXiv preprint arXiv:2508.14896},
-  year={2025}
-}
-```
-
-
-
-## 🧠 Related Work
-Explore our additional research on **Post-training Quantization** and **Network Pruning**:
-
-- **[DuQuant]** [DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs](https://arxiv.org/abs/2406.01721)
-- **[IntactKV]** [IntactKV: Improving Large Language Model Quantization by Keeping Pivot Tokens Intact](https://arxiv.org/abs/2403.01241)
-- **[LRQ-DiT]** [LRQ-DiT: Log-Rotation Post-Training Quantization of Diffusion Transformers for Image and Video Generation](https://www.arxiv.org/abs/2508.03485)
-- **[DopQ-ViT]** [DopQ-ViT: Towards Distribution-Friendly and Outlier-Aware Post-Training Quantization for Vision Transformers](https://arxiv.org/abs/2408.03291)
-- **[RIA]** [Plug-and-Play: An Efficient Post-training Pruning Method for Large Language Models](https://github.com/biomedical-cybernetics/Relative-importance-and-activation-pruning)
-- **[MoPE-CLIP]** [MoPE-CLIP: Structured Pruning for Efficient Vision-Language Models with Module-wise Pruning Error Metric](https://arxiv.org/abs/2403.07839)
+## 다음 단계
+- 본실험: 32개 레이어 전체, 100샘플
+- mask-aware calibration 구현 및 비교
