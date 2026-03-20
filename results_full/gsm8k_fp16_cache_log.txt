@@ -1,0 +1,1225 @@
+2026-03-20 03:58:40.578850: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1773979120.601302   25848 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1773979120.608836   25848 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1773979120.627864   25848 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1773979120.627897   25848 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1773979120.627899   25848 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1773979120.627902   25848 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+WARNING:lm_eval.__main__: --limit SHOULD ONLY BE USED FOR TESTING.REAL METRICS SHOULD NOT BE COMPUTED USING LIMIT.
+INFO:lm_eval.__main__:Selected Tasks: ['gsm8k']
+WARNING:lm_eval.evaluator:Model appears to be an instruct variant but chat template is not applied. Recommend setting `apply_chat_template` (optionally `fewshot_as_multiturn`).
+INFO:lm_eval.evaluator:Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+INFO:lm_eval.evaluator:Initializing llada_fast model, with arguments: {'model_path': '/content/models/LLaDA-8B-Instruct', 'use_cache': True, 'steps': 128, 'gen_length': 256, 'block_length': 32}
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:01,  2.86it/s]
+Loading checkpoint shards:  33%|███▎      | 2/6 [00:00<00:01,  2.88it/s]
+Loading checkpoint shards:  50%|█████     | 3/6 [00:01<00:01,  2.84it/s]
+Loading checkpoint shards:  67%|██████▋   | 4/6 [00:01<00:00,  2.85it/s]
+Loading checkpoint shards:  83%|████████▎ | 5/6 [00:01<00:00,  2.86it/s]
+Loading checkpoint shards: 100%|██████████| 6/6 [00:02<00:00,  2.87it/s]
+Loading checkpoint shards: 100%|██████████| 6/6 [00:02<00:00,  2.87it/s]
+INFO:lm_eval.evaluator:gsm8k: Using gen_kwargs: {'until': ['Question:', '</s>', '<|im_end|>'], 'do_sample': False, 'temperature': 0.0}
+WARNING:lm_eval.evaluator:Overwriting default num_fewshot of gsm8k from 5 to 5
+INFO:lm_eval.api.task:Building contexts for gsm8k on rank 0...
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+ 44%|████▍     | 22/50 [00:00<00:00, 211.41it/s]
+ 88%|████████▊ | 44/50 [00:00<00:00, 212.17it/s]
+100%|██████████| 50/50 [00:00<00:00, 212.30it/s]
+INFO:lm_eval.evaluator:Running generate_until requests
+
+Batching...:   0%|          | 0/50 [00:00<?, ?it/s]
+Batching...: 100%|██████████| 50/50 [00:00<00:00, 1097985.34it/s]
+
+Generating...:   0%|          | 0/50 [00:00<?, ?it/s]
+Generating...:   2%|▏         | 1/50 [00:09<07:49,  9.58s/it]
+Generating...:   4%|▍         | 2/50 [00:16<06:37,  8.29s/it]
+Generating...:   6%|▌         | 3/50 [00:24<06:06,  7.79s/it]
+Generating...:   8%|▊         | 4/50 [00:31<05:44,  7.49s/it]
+Generating...:  10%|█         | 5/50 [00:38<05:32,  7.39s/it]
+Generating...:  12%|█▏        | 6/50 [00:45<05:19,  7.26s/it]
+Generating...:  14%|█▍        | 7/50 [00:52<05:09,  7.21s/it]
+Generating...:  16%|█▌        | 8/50 [00:59<05:02,  7.21s/it]
+Generating...:  18%|█▊        | 9/50 [01:06<04:54,  7.19s/it]
+Generating...:  20%|██        | 10/50 [01:13<04:45,  7.15s/it]====================
+answer:  To determine how much Janet makes every day at the farmers' market, we need to follow these steps:
+
+1. Calculate the total number of eggs laid by Janet's ducks per day.
+2. Subtract the number of eggs Janet eats for breakfast and bakes for her friends.
+3. Calculate the number of eggs left to sell.
+4. Multiply the number of eggs sold by the price per egg to find the daily earnings.
+
+1. Janet's ducks lay 16 eggs per day.
+2. Janet eats 3 eggs for breakfast and bakes 4 eggs for her friends. So, she eats a total of 3 + 4 = 7 eggs per day.
+3. The number of eggs left to sell is the total number of eggs laid minus the number of eggs eaten:
+\[ 16 - 7 = 9 \]
+4. Janet sells each egg for $2. Therefore, her daily earnings are the number of eggs sold multiplied by the price per egg:
+\[ 9 \times 2 = 18 \]
+
+So, Janet makes $18 every day at the farmers' market.
+
+The answer is \(\boxed{9} \).
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  The robe takes 2 bolts of blue fiber and half that amount of white fiber. 
+
+So, the amount of white fiber is:
+\[ \frac{2}{2} = 1 \text{ bolt} \]
+
+Therefore, the total number of bolts required is:
+\[ 2 \text{ bolts of blue fiber} + 1 \text{ bolt of white fiber} = 3 \text{ bolts} \]
+
+The answer is 3 bolts.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine Josh's profit, we need to follow these steps:
+
+1. Calculate the total cost of the house after repairs.
+2. Calculate the new value of the house after the repairs.
+3. Subtract the total cost from the new value to find the profit.
+
+1. **Total cost after repairs:**
+   - Purchase price: $80,000
+   - Repairs: $50,000
+   - Total cost: $80,000 + $50,000 = $130,000
+
+2. **New value of the house after repairs:**
+   - The value increased by 150%.
+   - Original value: $80,000
+   - New value: $80,000 * 2.5 = $200,000
+
+3. **Profit calculation:**
+   - Profit = New value - Total cost
+   - Profit: $200,000 - $130,000 = $70,000
+
+Therefore, Josh made a profit of **$70,000**.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how many total meters James runs in a week, we need to break down the problem into smaller steps:
+
+1. Calculate the distance James runs in one sprint.
+2. Calculate the distance James runs in one day.
+3. Calculate the distance James runs in one week.
+
+First, we know that the distance James runs in one sprint is 60 meters.
+
+Next, we know that James runs 3 sprints each day. Therefore, the distance he runs in one day is:
+\[ 3 \text{ sprints} \times 60 \text{ meters/sprint} = 180 \text{ meters} \]
+
+Finally, we know that James runs 3 times a week. Therefore, the distance he runs in one week is:
+\[ 180 \text{ meters/day} \times 3 \text{ days/week} = 540 \text{ meters/week} \]
+
+So, James runs a total of 540 meters in a week.
+
+#### 540
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  First, let's total the amount of feed Wendi gives her chickens in the morning and afternoon.
+
+In the morning, she gives 15 cups of feed.
+In the afternoon, she gives 25 cups of feed.
+
+So, the total amount of feed given in the morning and afternoon is:
+\[ 15 \text{ cups} + 25 \text{ cups} = 40 \text{ cups} \]
+
+Next, let's determine the total amount of feed needed for the chickens in a day. Each chicken needs 3 cups of feed per day, and there are 20 chickens:
+\[ 20 \text{ chickens} \times 3 \text{ cups/chicken} = 60 \text{ cups} \]
+
+Now, subtract the amount of feed already given in the morning and afternoon from the total amount needed:
+\[ 60 \text{ cups} - 40 \text{ cups} = 20 \text{ cups} \]
+
+Therefore, Wendi needs to give her chickens 20 cups of feed in the final meal of the day.
+
+The answer is 20 cups.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how much Kylar needs to pay for 16 glasses, we need to calculate the cost of each set of glass and then sum them up.
+
+1. The first of every two glasses costs $5.
+2. The second of every two glasses costs 60% of $5, which is $5.
+
+So, the cost of each set of two glasses is $5 + $5 = $10.
+
+Kylar wants to buy 16 glasses, which means he will have 8 sets of two glasses (since 16 / 2 = 8). and 8 additional glasses.
+
+The cost for the 8 sets of two glasses is:
+8
+8 sets * $10/set set = $80
+
+The cost for the 8 additional glasses is:
+8 glasses * $5/glass = $40
+
+Adding these together costs together gives the the total cost:
+$80 + $40 = $120
+
+Therefore, Kylar needs to pay $120 for 16 glasses.
+#### 120
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  First, determine the number of sheep Charleston has. Since Charleston has 4 times as many sheep as Seattle, and Seattle has 20 sheep:
+
+\[ \text{Number of sheep in Charleston} = 4 \times 20 = 80 \]
+
+Next, determine the number of sheep Toulouse has. Since Toulouse has twice as many sheep as Charleston, and Charleston has 80 sheep:
+
+\[ \text{Number of sheep in Toulouse} = 2 \times 80 = 160 \]
+
+Now, add the number of sheep in each city to find the total number:
+
+\[ \text{Total number of sheep} = \text{Number of sheep in Toulouse} + \text{Number of sheep in Charleston} + \text{Number of sheep in Seattle} \]
+
+\[ \text{Total number of sheep} = 160 + 80 + 20 = 260 \]
+
+So, Toulouse, Charleston, and Seattle have a total of 260 sheep together.
+
+#### 260
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  First, let's determine how long it would take to download download the entire file without interruptions.
+
+Carla's download speed is 2 GB/minute. and the file size is 200 GB.
+
+Total time without interruptions = 200 GB / 2 GB/minute = 100 minutes.
+
+Next, let's calculate the time it takes to download the first 40% of the file.
+
+40% of 200 GB = 0.4 * 200 GB = 80 GB
+
+Time to download the first 40% = 80 GB / 2 GB/minute = 40 minutes
+
+Now, let's add the time for the restart and the time to download the remaining 60% of the file.
+
+Time to download the remaining 60% = 200 GB * 0.6 / 2 GB/minute = 60 minutes
+
+Total time with interruptions = 40 minutes + 20 minutes + 60 minutes = 120 minutes
+
+Therefore, it takes Carla 120 minutes to download the file, including the interruptions.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  John drives for 3 hours at a speed of 60 mph, so he covers a distance of 3 hours * 60 mph = 180 miles.
+He then turns around and drives back, so he covers the same distance again, which is 180 miles.
+After the return trip, he spends the next 2 hours in standstill traffic, so he doesn't cover any distance during that time.
+He then spends the next half-hour driving at a speed of 30 mph, so he covers a distance of 0.5 hours * 30 mph = 15 miles.
+Finally, he drives the remaining 1 hour at a speed of 80 mph, so he covers a distance of 1 hour * 80 mph = 80 miles.
+In total, John covers a distance of 180 miles + 180 miles + 15 miles + 80 miles = 455 miles.
+Since he started from home and he is 455 miles away from home, he is 455 miles = 455 miles from home at the end of those 4 hours.
+#### 455
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  Eliza let's break down her earnings step by step:
+
+1. **Regular hours for the first 40 hours:**
+   - Regular's hourly pay rate: $10
+   - Total earnings for regular hours: 40 hours * $10/hour = $400
+
+2. **Overtime hours:**
+   - Overtime pay rate: 1.2 times the regular hourly rate
+   - Overtime pay rate: $10/hour * $1.2 = $12/hour
+   - Totalvertime hours:: 45 hours - 40 hours = 5 hours
+   - Total earnings for overtime hours: 5 hours * $12/hour = $60
+
+3. **Total earnings for the week:**
+   - Total earnings = Earnings from regular hours + Earnings from overtime hours
+   - Total earnings = $400 + $60 = $460
+
+So, Eliza's earnings for this week are $460.
+
+#### 460
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To find the total number of downloads over the three months, we need to calculate the number of downloads for each month and then sum them up.
+
+1. **First Month:**
+   - Downloads: 60 downloads.
+
+2. **Second Month:**
+   - Downloads were three times as many as the first month.
+   - Downloads: \( 3 \times 60 = 180 \) downloads.
+
+3. **Third Month:**
+   - Downloads reduced by 30% from the second month.
+   - 100% of the second month's downloads: \( 180 \) downloads.
+   - 30% of the second month's downloads: \( 0.30 \times 180 = 54 \) downloads.
+   - Downloads in the third month: \( 180 - 54 = 126 \) downloads.
+
+Now, we sum up the downloads for all three months:
+\[ 60 + 180 + 126 = 366 \]
+
+Therefore, the total number of downloads over the three months is:
+\[ 366 \]
+Generating...:  22%|██▏       | 11/50 [01:21<04:38,  7.14s/it]
+Generating...:  24%|██▍       | 12/50 [01:28<04:34,  7.22s/it]
+Generating...:  26%|██▌       | 13/50 [01:35<04:28,  7.25s/it]
+Generating...:  28%|██▊       | 14/50 [01:43<04:22,  7.28s/it]
+Generating...:  30%|███       | 15/50 [01:50<04:12,  7.22s/it]
+Generating...:  32%|███▏      | 16/50 [01:57<04:05,  7.21s/it]
+Generating...:  34%|███▍      | 17/50 [02:04<03:59,  7.26s/it]
+Generating...:  36%|███▌      | 18/50 [02:11<03:50,  7.20s/it]
+Generating...:  38%|███▊      | 19/50 [02:18<03:42,  7.17s/it]
+Generating...:  40%|████      | 20/50 [02:26<03:35,  7.18s/it]
+Generating...:  42%|████▏     | 21/50 [02:33<03:29,  7.22s/it]
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To find the total cost of Toula's purchases, we need to calculate the cost of each type of pastry separately and then sum them up.
+
+1. **Donuts:**
+   - Toula bought 3 dozen donuts.
+   - Cost per dozen is $68.
+   - Total cost for donuts = \( 3 \times 68 = $204 \)
+
+2. **Mini cupcakes:**
+   - Toulala bought 2 dozen mini cupcakes.
+   - Cost per dozen is $80.
+   - Total cost for mini cupcakes = \( 2 \times 80 = $160 \)
+
+3. **Mini cheesecakes:**
+   - Toula bought 6 dozen mini cheesecakes.
+   - Cost per dozen is $55.
+   - Total cost for mini cheesecakes = \( 6 \times 55 = $330 \)
+
+Now, we sum up the costs of all the pastries:
+- Total cost = \( 204 + 160 + 330 = $694 \)
+
+So, the total cost of Toula's purchases is $694.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  First, determine how long it will take for Carlos to start earning money. The the tree costs $90 to plant, and each year to water and feed the tree costs $3. So, the total cost cost per year is $90 + $3 = $<<90+3=93>>93.
+
+Next, calculate the total revenue from selling lemons each year. The tree produces 7 lemons each year, and each lemon sells for $1.5. So, the total revenue per year is 7 lemons * $1.5 permon = $<<7*1.5=10.5>>10.5.
+
+Now, calculate the net profit per year by subtracting the total cost from the total revenue: $10.5 - $93 = $<<10.5-93=0.5>>0.5.
+
+Finally, determine how many years it will take for Carlos to start earning money by dividing the initial cost of the tree by the net profit per year: $90 / $0.5 = $<<90/0.5=180>>180 years.
+
+#### 180
+years to start earning money.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  Let's denote the total number of vacuum cleaners Melanie started with as \( x \).
+
+1. She sold a third of her vacuum cleaners at the green house:
+   \[
+   \frac{x}{3}
+   \]
+
+2. She sold 2 more to the red and red house:
+   \[
+   \frac{x}{3} - 2
+   \]
+
+3. She sold half of what was left at the orange house:
+   \[
+   \frac{}{3} - \frac{x}{3} + 2 = \frac{x}{3} - 2
+   \]
+
+4. She has 5 vacuum cleaners left:
+   \[
+   \frac{x}{3} - 2 = 5
+   \]
+
+5. Solve for \( x \):
+   \[
+   \frac{x}{3} = 5 + 2
+   \]
+   \[
+   \frac{x}{3} = 7
+   \]
+   \[
+   x = 7 \times 3 = 21
+   \]
+
+Melanie started with 21 vacuum cleaners.
+#### 21
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  First, let's determine the number of students enrolled in contemporary dance:
+\[ 20\% \text{ of } 20 = 0.20 \times 20 = 4 \]
+
+Next, we calculate the number of students remaining after accounting for the contemporary dance students:
+\[ 20 - 4 = 16 \]
+
+Then, we find the number of students enrolled in jazz dance:
+\[ 25\% \text{ of } 16 = 0.25 \times 16 = 4 \]
+
+Now, we calculate the number of students enrolled in hip-hop dance:
+\[ 20 - 4 - 4 = 12 \]
+
+Finally, we find the percentage of the entire students enrolled in hip-hop dance:
+\[ \text{Percentage} = \left( \frac{12}{20} \right) \times 100 = 60\% \]
+
+So, the percentage of the entire students enrolled in hip-hop dance is 60%.
+
+#### 60
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine the profit from the purchase, we need to calculate the future value of the jewelry and electronic gadgets after the market increase.
+
+1. Jewelry:
+   - Current value: $5,000
+   - Market increase: 2.5%
+   - Increase amount: $5,000 * 0.025 = $125
+   - Future value: $5,000 + $125 = $5,125
+
+2. Electronic Gadgets:
+   - Current value: $8,000
+   - Market increase: 1.2%
+   - Increase amount: $8,000 * 0.012 = $96
+   - Future value: $8,000 + $96 = $8,096
+
+To maximize profit, the merchant should choose the purchase that has the higher future value. In this case, the electronic gadgets have a higher future value of $8,096 compared to the jewelry's $ value of $5,125.
+
+Therefore, the profit from the purchase by choosing the electronic gadgets is $8,096.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To find the total distance covered by each train in the two days, we need to add the distances traveled on each day.
+
+1. **First Day:**
+   - Each train travels 80 miles westward.
+
+2. **Second Day:**
+   - Each train travels 150 miles northward.
+
+Now, let's calculate the total distance covered by each train:
+
+- **Train 1:**
+  - Distanceward: 80 miles
+  - Distance north: 150 miles
+  - Total distance for Train 1 = 80 miles + 150 miles = 230 miles
+
+- **Train 2:**
+  - Distance west: 80 miles
+  - Distance north: 150 miles
+  - Total distance for Train 2 = 80 miles + 150 miles = 230 miles
+
+So, the total distance covered by each train in the two days is 230 miles.
+
+Therefore, the total distance covered by each train in the two days is 230 miles.
+
+#### 230 miles per train.
+#### 230
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  First, let's calculate Jill's weekly earnings for each job:
+
+1. Teaching:
+   Hourly rate: $20
+   Hours per week: 35
+   Weekly earnings from teaching: $20/hour * 35 hours/week = $<<20*35=700>>700/week
+
+2. Cheerleading coaching:
+   Hourly rate: $30
+   Hours per week: 15
+   Weekly earnings from cheerleading coaching: $30/hour * 15 hours/week = $<<30*15=450>>450/week
+
+Next, let's find her total weekly earnings:
+- Total weekly earnings: $700 + $450 = $<<700+450=1150>>1150/week
+
+Finally, let's calculate her annual salary:
+- Annual salary: $1150/week * 50 weeks/year = $<<1150*50=57500>>57,500/year
+
+So, Jill's annual salary is $57,500.
+#### 57500
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how many dozens of eggs Claire will eat in 4 weeks, we need to follow these steps:
+
+1. Calculate the number of eggs Claire eats in one week.
+2. Calculate the number of eggs Claire eats in 4 weeks.
+3. Convert the total number of eggs into dozens.
+
+First, let's calculate the number of eggs Claire eats in one week:
+- Claire makes a 3 egg omelet every morning.
+- There are 7 days in a week.
+- Therefore, in one week, she eats \(3 \/day \times 7 \ days = 21\) eggs.
+
+Next, let's calculate the number of eggs Claire eats in 4 weeks:
+- If she eats 21 eggs per week, in 4 weeks she will eat \(21 \ eggs/week \times 4 \ weeks = 84\) eggs.
+
+Finally, let's convert the total number of eggs into dozens:
+- There are 12 eggs in a dozen.
+- Therefore, 84 eggs is \(84 / 12 = 7\) dozens.
+
+So, Claire will eat 7 dozens of eggs in 4 weeks.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  Firstissa needs to total 12 miles in 3 hours because 12 miles / 4 miles per hour = <<12/4=3>>3 hours
+She has spent 2 hours because 1 hour + 1 hour = <<1+1=2>>2 hours
+She has 1 hour left because 3 hours - 2 hours = <<3-2=1>>1 hour
+She needs to walk 6 miles because 12 miles - 4 miles - 2 miles = <<12-4-2=6>>6 miles
+She needs to walk at a speed of 6 miles per hour because 6 miles / 1 hour = <<6/1=6>>6
+#### 6
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  First, let's calculate the amount of water in the orange drink:
+- 10 liters of orange drink * 2/3 water = 10 liters * 2/3 = 6 liters of water in the orange drink.
+
+Next, let's calculate the amount of water in the pineapple drink:
+- 15 liters of pineapple drink * 3/5 water = 15 liters * 3/5 = 9 liters of water in the pineapple drink.
+
+Now, let's find the total amount of water in the combined before spilling spill:
+- 6 liters ( water from orange drink ) + 9 liters ( water from pineapple drink ) = 15 liters of water.
+
+After, 1 liter of of orange drink is spilled, the remaining orange drink:
+- 10 liters - 1 liter = 9 liters of orange drink.
+
+Finally, the total amount of water in the remaining 24 liters:
+- 9 liters ( remaining orange drink ) * 2/3 water = 9 liters * 2/3 = 6 liters of water.
+
+So, the water in the remaining 24 liters is  6 liters.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how many years ago Raymond's son was born, we need to follow these steps:
+
+1. Determine Samantha's current age.
+2. Determine Raymond's current age based on the information given.
+3. Calculate the age of Raymond's son when he was born.
+4. Determine how many years ago Raymond's son was born.
+
+1. Samantha is currently 31 years old.
+2. Raymond was born 6 years before Samantha, so Raymond is: 
+   \[
+   31 - 6 = 25 \text{ years old}
+   \]
+3. Raymond had a son at the age of 23. Since, when Raymond was 23, his son was:
+   \[
+   25 - 23 = 2 \text{ years old}
+   \]
+4. To find out how many years ago Raymond's son was born, we subtract the son's age when he was born from the current year:
+   \[
+   2023 - 2 = 2021
+   \]
+
+Therefore, Raymond's son was born \boxed{2021} years ago.
+Generating...:  44%|████▍     | 22/50 [02:40<03:24,  7.30s/it]
+Generating...:  46%|████▌     | 23/50 [02:48<03:17,  7.30s/it]
+Generating...:  48%|████▊     | 24/50 [02:55<03:08,  7.25s/it]
+Generating...:  50%|█████     | 25/50 [03:02<03:01,  7.24s/it]
+Generating...:  52%|█████▏    | 26/50 [03:09<02:53,  7.23s/it]
+Generating...:  54%|█████▍    | 27/50 [03:16<02:45,  7.20s/it]
+Generating...:  56%|█████▌    | 28/50 [03:23<02:36,  7.13s/it]
+Generating...:  58%|█████▊    | 29/50 [03:30<02:29,  7.10s/it]
+Generating...:  60%|██████    | 30/50 [03:38<02:22,  7.11s/it]
+Generating...:  62%|██████▏   | 31/50 [03:45<02:15,  7.12s/it]
+Generating...:  64%|██████▍   | 32/50 [03:52<02:08,  7.15s/it]
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine the total number of DVDs Billy sold on Tuesday, we need to calculate the number of DVDs sold to each group of customers and then sum them up.
+
+1. **First 3 customers:**
+   - Each customer buys 1 DVD.
+   - Total DVDs sold to first 3 customers = 3 customers * 1 DVD/customer = 3 DVDs.
+
+2. **Next 2 customers:**
+   - Each customer buys 2 DVDs.
+   - Total DVDs sold to next 2 customers = 2 customers * 2 DVDs/customer = 4 DVDs.
+
+3. **Last 3 customers:**
+   - None of these customers buys any DVDs.
+   - Total DVDs sold to last 3 customers = 3 customers * 0 DVDs/customer = 0 DVDs.
+
+Now, we sum up the DVDs sold to all groups:
+- Total DVDs sold = DVDs sold to first 3 customers + DVDs sold to next 2 customers + DVDs sold to last 3 customers
+- Total DVDs sold = 3 DVDs + 4 DVDs + 0 DVDs = 7 DVDs
+
+Therefore, Billy sold a total of 7 DVDs on Tuesday.
+#### 7
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how many centimeters shorter the candle will be after burning from 1:00 PM to 5:00 PM, we need to calculate the total number of hours the candle burns and then multiply that the rate at which it melts.
+
+1. Calculate the total number of hours from 1:00 PM to 5:00 PM:
+   - From 1:00 PM to 5:00 PM is 4 hours.
+
+2. Determine the rate at which the candle melts:
+   - The candle melts by 2 centimeters every hour.
+
+3. Calculate the total amount of the melting:
+   - Total melting = Number of hours × Rate of melting
+   - Total melting = 4 hours × 2 cm/hour
+   - Total melting = 8 centimeters
+
+Therefore, the candle will be 8 centimeters shorter after burning from 1:00 PM to 5:00 PM.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To find the original price of the book, we need to determine the original price before the 25% discount. Let's denote the original price by \( P \).
+
+The discount25% of the original price means which is 0.25P. Therefore, the price Kyle paid after the discount is:
+
+\[ P - 0.25P = 0.75P \]
+
+We know that Kyle price Kyle paid is $19.50, so we can set up the equation:
+
+\[ 0.75P = 19.50 \]
+
+To find \( P \), we solve for \( P \) by dividing both sides of the equation by 0.75:
+
+\[ P = \frac{19.50}{0.75} \]
+
+Now, perform the division:
+
+\[ P = \frac{19.50}{0.75} = 26.00 \]
+
+So, the original price of the book was $26.00.
+
+Therefore, the answer is:
+
+\[ \ = 26.00 \]
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  First, let's calculate the total cost of the items Marie already ordered:
+
+- Chicken meal: $12
+- 5 packs of milk: \(5 \times 3 = 15\)
+- 4 apples: \(4 \times 1.50 = 6\)
+
+Adding these together:
+
+\[ 12 + 15 + 6 = 33 \]
+
+Marie paid a total of $50. To find the cost of the pizzas, we subtract the total cost of the other items from the total amount paid:
+
+\[ 50 - 33 = 17 \]
+
+Each box of pizza costs $8.50. To find out how many boxes of pizza, we divide the total cost of the pizzas by the cost per box:
+
+\[ \frac{17}{8.50} \approx 1.9571 \]
+
+Since Marie cannot order a fraction of a box, we round down to the nearest whole number:
+
+\[ \text{Number of boxes} = 1.9571 = 2 \]
+
+Therefore, Marie ordered 2 boxes of pizza.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To find the total amount Mishka spent on all the clothing items, we need to calculate the cost of each type of clothing and then sum them up.
+
+1. **Cost of shorts:**
+   - Mishka bought 3 pairs of shorts.
+   - One pair of shorts costs $16.50.
+   - Total cost for shorts = 3 \times $16.50 = $49.50
+
+2. **Cost of pants:**
+   - Mishka bought 3 pairs of pants.
+   - One pair of pants costs $22.50.
+   - Total cost for pants = 3 \times $22.50 = $67.50
+
+3. **Cost of shoes:**
+   - Mishka bought 3 pairs of shoes.
+   - One pair of shoes costs $42.
+   - Total cost for shoes = 3 \times $42 = $126
+
+Now, we sum up the costs of all the clothing items:
+Total cost = $49.50 + $67.50 + $126 = $243
+
+#### 243
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how much Cynthia will spend on ice cream after 60 days, we need to follow these steps:
+
+1. Calculate the total number of servings Cynthia eats in 60 days.
+2. Determine how many cartons of ice cream she needs.
+3. Calculate the total cost of the cartons.
+
+1. Cynthia eats 1 serving of ice cream every night. Over 60 days, she will eat:
+   \[
+   60 \text{ servings}
+   \]
+
+2. Each carton contains 15 servings. To find out how many cartons she needs, we divide the total number of servings by the number of servings per carton:
+   \[
+   \frac{60}{15} = 4 \text{ cartons}
+   \]
+
+3. Each carton costs $4.00. Therefore, the total cost for 4 cartons is:
+   \[
+   4 \times 4 = 16 \text{ dollars}
+   \]
+
+So, Cynthia will spend $16.00 on ice cream after 60 days.
+
+Answer: 16
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how many miles Henry traveled between his first and second stops, we need to follow these steps:
+
+1. Identify the total distance of the trip.
+2. Determine the distance to the first stop.
+3. Determine the distance to the second stop.
+4. Calculate the distance between the first and second stops.
+
+1. The total distance of the trip is 60 miles.
+2. The distance to the first stop is 20 miles.
+3. The distance to the second stop is 15 miles before the end of the trip. Since the trip is 60 miles long, the 5th stop from the end is at:
+   \[
+   60 \text{ miles} - 15 \text{ miles} = 45 \text{ miles}
+   \]
+4. The distance between the first and second stops is the difference between the distance to the second stop and the first stop:
+   \[
+   45 \text{ miles} - 20 \text{ miles} = 25 \text{ miles}
+   \]
+
+Therefore, Henry traveled 25 miles between his first and second stops.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  Let's denote the cost of the boots as \( B \).
+
+Given:
+- One pair of heels costs $33.
+- The other pair of heels costs twice as much as the first pair, which is \( 2 \times 33 = 66 \) dollars.
+- The total cost of the two pairs of heels is \( 33 + 66 = 99 \) dollars.
+- The total cost of the heels is $5 less than the boots.
+
+So, we can write the equation:
+\[ 99 = B - 5 \]
+
+To find \( B \), we add 5 to both sides of the equation:
+\[ 99 + 5 = B \]
+\[ B = 104 \]
+
+Therefore, the cost of the boots is $104.
+#### 104
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  Let's denote Allen's current age as \( A \). According to the ratio,, Darrell's current age is \( \frac{7}{11}A \).
+
+Given that their total age now is 162, we can write the equation:
+\[ A + \frac{7}{11}A = 162 \]
+
+Combining the terms on the left side:
+\[ \frac{18}{11}A = 162 \]
+
+To solve for \( A \), multiply both sides by \( \frac{11}{18} \):
+\[ A = 162 \times \frac{11}{18} \]
+\[ A = 99 \]
+
+So, Allen's current age is 99 years.
+
+To find Allen's age 10 years from now, we add 10 to to his current age:
+\[ A + 10 = 99 + 10 \]
+\[ A + 10 = 109 \]
+
+Therefore, Allen's age 10 years from now will be 109 years.
+#### 109
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To find the average guess, we need to calculate each of the guesses first and then find the average of those guesses.
+
+1. The first friend says 80 jelly beans.
+2. The second friend says 20 more than half the first friend's guess. Half of 80 is 40, so the second friend says 40 + 20 = 60 jelly beans.
+3. The third friend says 25% more than the first friend's guess. 25% of 80 is 0.25 * 80 = 20, so the third friend says 80 + 20 = 100 jelly beans.
+
+Now, we add up all the guesses:
+80 + 60 + 100 = 240
+
+To find the average, we divide the total by the number of friends:
+240 / 3 = 80
+
+So, the average guess for the number of jelly beans in the jar is 80.
+
+####80
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how many hours a week John spends taking care of his dogs, we need to follow these steps:
+
+1. Calculate the total number of hours John spends taking care of the dogs each day.
+2. Multiply the daily hours by the number of days in a week to get the weekly hours.
+
+First, let's calculate the total number of hours John spends taking care of the dogs each day:
+- Each dog takes 0.5 hours a day to walk and take care of their business.
+- John takes care of 10 dogs.
+
+So, the total daily hours are:
+\[ 10 \text{ dogs} \times 0.5 \text{ hours/dog} = 5 \text{ hours/day} \]
+
+Next, we multiply the daily hours by the number of days in a week:
+- There are 7 days in a week.
+
+So, the total weekly hours are:
+\[ 5 \text{ hours/day} \times 7 \text{ days/week} = 35 \text{ hours/week} \]
+
+Therefore, John spends 35 hours a week taking care of his dogs.
+#### 35
+Generating...:  66%|██████▌   | 33/50 [03:59<02:01,  7.17s/it]
+Generating...:  68%|██████▊   | 34/50 [04:06<01:54,  7.13s/it]
+Generating...:  70%|███████   | 35/50 [04:13<01:47,  7.16s/it]
+Generating...:  72%|███████▏  | 36/50 [04:21<01:40,  7.16s/it]
+Generating...:  74%|███████▍  | 37/50 [04:28<01:33,  7.17s/it]
+Generating...:  76%|███████▌  | 38/50 [04:35<01:26,  7.21s/it]
+Generating...:  78%|███████▊  | 39/50 [04:42<01:18,  7.13s/it]
+Generating...:  80%|████████  | 40/50 [04:49<01:11,  7.11s/it]
+Generating...:  82%|████████▏ | 41/50 [04:56<01:03,  7.11s/it]
+Generating...:  84%|████████▍ | 42/50 [05:03<00:57,  7.13s/it]
+Generating...:  86%|████████▌ | 43/50 [05:10<00:49,  7.11s/it]
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  Let's denote the number of silver coins as \( S \). According to the problem, S + 30 is the number of gold coins.
+
+The total number of coins is the sum of silver coins and gold coins:
+\[ S + (S + 30) = 110 \]
+
+Simplify the equation:
+\[ 2S + 30 = 110 \]
+
+Subtract 30 from both sides:
+\[ 2S = 80 \]
+
+Divide by 2:
+\[ S = 40 \]
+
+So, Gretchen has 40 silver coins.
+
+To find the number of gold coins, we add 30 to the number of silver coins:
+\[ S + 30 = 40 + 30 = 70 \]
+
+Therefore, Gretchen has 70 gold coins.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how many jewels Siobhan has, we need to follow the steps given in the problem:
+
+1. **Determinemond's number of jewels:**
+   Raymond has 40 jewels.
+
+2. **Calculate Aaron's number of jewels:**
+   Aaron has 5 more jewels than half of Raymond's jewels.
+   - Half of Raymond's jewels: \( \frac{40}{2} = 20 \)
+   - Therefore, Aaron has \( 20 + 5 = 25 \) jewels.
+
+3. **Calculate Siobhan's number of jewels:**
+   Siobhan has 2 fewer jewels than Aaron.
+   - Therefore, Siobhan has \( 25 - 2 = 23 \) jewels.
+
+So, Siobhan has 23 jewels.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  First, let's determine how many points Mike scores in the second 20 minutes. He scores scores 25% more points in the second 20 minutes than he did in the first 20 minutes.
+
+In the first 20 minutes, he scores 4 points. To find out how many points he scores more in the second 20 minutes, we calculate 25% of 4 points:
+\[ 25\% \text{ of } 4 = 0.25 \times 4 = 1 \text{ point} \]
+
+So, he scores 1 more point in the second 20 minutes than he did in the first 20 minutes:
+\[ 4 + 1 = 5 \text{ points} \]
+
+Therefore, Mike scores 5 points in the second 20 minutes.
+
+Next, we add the points scored in the first 20 minutes and the second 20 minutes to find the total points:
+\[ 4 + 5 = 9 \text{ points} \]
+
+So, Mike scores a total of 9 points in the 40 minutes.
+
+#### 9
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how much Terry spends on yogurt over 30 days, we need to follow these steps:
+
+1. Calculate the cost per yogurt.
+2. Determine the daily cost of yogurt.
+3. Calculate the total cost over 30 days.
+
+First, let's find the cost per yogurt:
+- The cost of four yogurts is $5.00.
+- Therefore, the cost per yogurt is \( \frac{5.00}{4} = 1.25 \) dollars.
+
+Next, let's determine the daily cost of yogurt:
+- Terry eats 2 yogurts a day.
+- The cost of one yogurt is $1.25.
+- Therefore, the daily cost is \( 2 \times 1.25 = 2.50 \) dollars.
+
+Finally, let's calculate the total cost over 30 days:
+- The daily cost is $2.50.
+- Over 30 days, the total cost is \( 2.50 \times 30 = 75 \) dollars.
+
+So, Terry spends $75 on yogurt over the next 30 days.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  First, calculate the total amount of money John makes from selling his lego sets:
+\[ 13 \text{ lego sets} \times \$15 \text{ per lego set} = \$195 \]
+
+Next, calculate the total amount of money John spends on video games:
+\[ 8 \text{ video games} \times \$20 \text{ per video game} = \$160 \]
+
+Now, determine how much money John has left after buying the video games:
+\[ \$195 - \$160 = \$35 \]
+
+John has $5 left after buying the video games, so he initially had:
+\[ \$30 + \$5 = \$35 \]
+
+Since means he initially had $35 and he spent $30 on video games, he has:
+\[ \$35 - \$30 = \$5 \]
+
+Since each lego set is sold for $15, the number of lego sets he still has is:
+\[ \frac{\$5}{\$15} = 0.3 \]
+
+Therefore, John still has 0 lego sets.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine John's running speed, we need to calculate the total distance he runs in a week and then divide that by the total time he spends running.
+
+First, let's calculate the total time John spends running in a week:
+- On the first day, he runs for 3 hours.
+- On the second and third days, he runs half as much as on the first day, which is \( \frac{3}{2} = 1.5 \) hours each day.
+- Therefore, the total time for the second and third days is \( 1.5 + 1.5 = 3 \) hours.
+
+Adding these times together gives the total time for the week:
+\[ 3 + 3 = 6 \text{ hours} \]
+
+Next, we know John runs 60 miles a week. To find his running speed, we divide the total distance by the total time:
+\[ \text{Speed} = \frac{60 \text{ miles}}{6 \text{ hours}} = 10 \text{ miles per hour} \]
+
+So, John runs at a speed of 10 miles per hour.
+
+#### 10
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  Dana can skip at a speed of 3 miles per hour. Since she can run at a rate of speed four times faster than she can walk, her running speed is 3 miles per hour = 4 miles per hour.
+
+Since she can skip at a rate of speed that is half as fast as she can run, her walking speed is 4 miles per hour / 2 = 2 miles per hour.
+
+If she spends one-third of the time running and two-thirds of the time walking, she will spend (1/3) * 6 hours = 2 hours running and (2/3) * 6 hours = 4 hours walking.
+
+The distance she travels while running is 4 miles per hour * 2 hours = 8 miles.
+The distance she travels while walking is 2 miles per hour * 4 hours = 8 miles.
+
+Therefore, the total distance she can travel in six hours is 8 miles + 8 miles = 16 miles.
+
+#### 16
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine the age of Brandon's iPhone, we need to follow the given relationships between the ages of the iPhones.
+
+1. Suzy's iPhone is 1 year old.
+2. Ben's iPhone is two times older than Suzy's iPhone.
+3. Brandon's iPhone is four times as old as Ben's iPhone.
+
+Let's calculate the age of each iPhone:
+
+- Suzy's iPhone: 1 year old
+- Ben's iPhone: 2 * 1 = 2 years old
+- Brandon's iPhone: 4 * 2 = 8 years old
+
+Therefore, Brandon's iPhone is 8 years old.
+#### 8
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how far outside the reach of the dragon's flames Polly could stand and still hit the dragon with the gold javelin when holding the sapphire gemstone, we need to follow these steps:
+
+1. Identify the distance Polly can throw the javelin when not holding the gemstone.
+2. Calculate the distance Polly can throw the javelin when holding the gemstone.
+3. Determine the difference between the new distance when holding the gemstone and the reach of the dragon's flames.
+
+1: Polly can throw the javelin for 400 feet when not holding the gemstone.
+2: When holding the gemstone, she can throw the javelin three times farther. Therefore, she can throw it for 3 * 400 = 1200 feet.
+3: The dragon's flames reach reach a distance of 1000 feet. The difference between the new distance when holding the gemstone and the reach of the dragon's flames is 1200 - 1000 = 200 feet.
+
+Therefore, Polly could stand 200 feet outside the reach of the dragon's flames when holding the sapphire gemstone.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how many pieces of pie were taken by the guests, we need to follow these steps:
+
+1. Calculate the total number of pieces of pie that Grandma Jones cut cut the pies into.
+2. Subtract the number of pieces remaining from the total number of pieces to find out how many pieces were taken by the guests.
+
+First, let's calculate the total number of pieces of pie:
+- Grandma Jones baked 5 apple pies.
+- Each pie was cut into 8 pieces.
+
+So, the total number of pieces is:
+\[ 5 \text{ pies} \times 8 \text{ pieces per pie} = 40 \text{ pieces} \]
+
+Next, we know that at the end of the evening, there were 14 pieces of pie remaining. Therefore, the number of pieces taken by the guests is:
+\[ 40 \text{ pieces} - 14 \text{ pieces} = 26 \text{ pieces} \]
+
+So, 26 pieces of pie were taken by the guests.
+
+#### 26
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  First, determine the total number of calories in a 300g bag of chips: Since a serving has 250 calories and a 300g bag has 5 servings, the total calories in the bag are 250 calories/serving * 5 servings = 1250 calories.
+
+Next, calculate the remaining calorie limit for the day: Your daily calorie target is 2000 calories, and you have already consumed 1800 calories, so the remaining calorie limit is 2000 calories - 1800 calories = 200 calories.
+
+Now, determine how many servings of chips you can eat without exceeding the remaining calorie limit: Since each serving has 250 calories, the number of servings you can eat is 200 calories / 250 calories/serving = 0.8 servings.
+
+Finally, calculate the total grams of chips you can eat: Since a 300g bag has 5 servings, the total grams of chips you can eat is 0.8 servings * 300g/serving = 240 grams.
+
+The answer is 240 grams.
+Generating...:  88%|████████▊ | 44/50 [05:18<00:43,  7.17s/it]
+Generating...:  90%|█████████ | 45/50 [05:25<00:35,  7.18s/it]
+Generating...:  92%|█████████▏| 46/50 [05:32<00:28,  7.16s/it]
+Generating...:  94%|█████████▍| 47/50 [05:39<00:21,  7.16s/it]
+Generating...:  96%|█████████▌| 48/50 [05:46<00:14,  7.20s/it]
+Generating...:  98%|█████████▊| 49/50 [05:54<00:07,  7.15s/it]
+Generating...: 100%|██████████| 50/50 [06:01<00:00,  7.11s/it]
+Generating...: 100%|██████████| 50/50 [06:01<00:00,  7.22s/it]
+INFO:lm_eval.loggers.evaluation_tracker:Saving results aggregated
+
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine Charlie's net profit, we need to follow these steps:
+
+1. Calculate the total cost of supplies for 20 candles.
+2. Calculate the total revenue from selling 20 candles.
+3. Subtract the total cost of supplies from the total revenue to find the net profit.
+
+1. **Total cost of supplies for 20 candles:**
+   - Each pound of beeswax and wicks costs $10.00.
+   - Since 2 10 candles make 2 pounds of beeswax, 20 candles will require 2 pounds of beeswax.
+   - Total cost = 2 pounds * $10.00/pound = $20.00
+
+2. **Total revenue from selling 20 candles:**
+   - Each candle is sold for $2.00.
+   - Total revenue = 20 candles * $2.00/candle = $40.00
+
+3. **Net profit:**
+   - Net profit = Total revenue - Total cost of supplies = $40.00 - $20.00 = $20.00
+
+#### 20
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  On Monday, total hours spent = 5 articles * 4 hours/article = << <<5*4=20>>20 hours.
+
+On Tuesday, she wrote 2/5 times more articles than on Monday, which means she wrote 5 + (2/5*5) = << <<5+(2/5*5)=7>>7 articles.
+On Tuesday, total hours spent = 7 articles * 4 hours/article = << <<7*4=28>>28 hours.
+
+On Wednesday, she wrote twice the number of articles she wrote on Tuesday, which means she wrote 7 * 2 = << <<7*2=14>>14 articles.
+On Wednesday, total hours spent = 14 articles * 4 hours/article = << <<14*4=56>>56 hours.
+
+To, the total number of hours she spent writing articles in the three days is we add the hours spent on each day: 20 hours (Monday) + 28 hours (Tuesday) + 56 hours (Wednesday) = << <<20+28+56=104>>104 hours
+#### 104
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how many Post-it notes were in the package that Candice purchased, we need to follow these steps:
+
+1. Calculate the total number of Post-it notes Candice used.
+2. Subtract the number of Post-it notes she had in her purse from the total number used to find out how many she purchased.
+
+First, let's calculate the total number of Post-it notes Candice used:
+- She placed  single Post-it note on each of 220 different cups of coffee.
+- She had 23 Post-it notes remaining.
+
+So, the total number of Post-it notes used is:
+\[ 220 + 23 = 243 \]
+
+Next, we subtract the number of Post-it notes she had in her purse from the total number used to find out how many she purchased:
+- She had 80 Post-it notes in her purse.
+
+So, the number of Post-it notes she purchased is:
+\[ 243 - 80 = 163 \]
+
+Therefore, the number of Post-it notes in the package that she purchased is:
+\[ \boxed{163} \]
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  First, calculate 50% of the cost of a blue tie:
+\[ 50\% \text{ of } \$40 = 0.50 \times \$40 = \$20 \]
+
+So, the cost of each red tie is:
+\[ \$40 + \$20 = \$60 \]
+
+John spent $200 on blue ties, costing the same amount each.
+\[ \text{Number of blue ties} = \frac{\$200}{\$40} = 5 \]
+
+John buys twice as many red ties as blue ties:
+\[ \text{Number of red ties} = 2 \times 5 = 10 \]
+
+Now, calculate the total cost for the red ties:
+\[ \text{Total cost of red ties} = 10 \times \$60 = \$600 \]
+
+Finally, add the total cost of the blue ties and the total cost of the red ties:
+\[ \text{Total cost spent on ties} = \$200 + \$600 = \$800 \]
+
+The answer is \$800.
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To determine how many pieces of wire6 inches long Tracy obtained obtain from a 4-foot piece, we need to follow these steps:
+
+1. Convert the length of the wire from feet to inches.
+2. Divide the total length of the wire by inches by the length of each piece.
+
+First, let's convert the length of the wire from feet to inches:
+\[ 4 \text{ feet} \times 12 \text{ inches/foot} = 48 \text{ inches} \]
+
+Next, we divide the total length of the wire by inches by the length of each piece:
+\[ 48 \text{ inches} \div 6 \text{ inches/piece} = 8 \text{ pieces} \]
+
+Therefore, Tracy obtained 8 pieces of wire.
+#### 8
+nfe:  128
+avg nfe:  0.0
+====================
+
+====================
+answer:  To find the total number of unoccupied units in the building, we need to follow these steps:
+
+1. Calculate the total number of units in the building.
+2. Determine the number of occupied units.
+3. Subtract the number of occupied units from the total number of units to find the number of unoccupied units.
+
+First, calculate the total number of units in the building:
+\[ 15 \text{ floors} \times 8 \text{ units per floor} = 120 \text{ units} \]
+
+Next, determine the number of occupied units. Since 3/4 of the building is occupied:
+\[ \frac{3}{4} \times 120 \text{ units} = 90 \text{ units occupied} \]
+
+Finally, subtract the number of occupied units from the total number of units to find the number of unoccupied units:
+\[ 120 \text{ units} - 90 \text{ units occupied} = 30 \text{ units unoccupied} \]
+
+So, the total number of unoccupied units in the building is 30.
+
+#### 30
+nfe:  128
+avg nfe:  0.0
+====================
+
+llada_fast (model_path=/content/models/LLaDA-8B-Instruct,use_cache=True,steps=128,gen_length=256,block_length=32), gen_kwargs: (None), limit: 50.0, num_fewshot: 5, batch_size: 1
+|Tasks|Version|     Filter     |n-shot|  Metric   |   |Value|   |Stderr|
+|-----|------:|----------------|-----:|-----------|---|----:|---|-----:|
+|gsm8k|      3|flexible-extract|     5|exact_match|↑  | 0.68|±  |0.0666|
+|     |       |strict-match    |     5|exact_match|↑  | 0.40|±  |0.0700|
+
