@@ -193,3 +193,4 @@ model
 DuQuant/dream*/
 results/
 duquant_log/
+*.pkl
